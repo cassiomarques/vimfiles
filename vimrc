@@ -146,8 +146,8 @@ map <Leader>o :call RunCurrentLineInTest()<CR>
 cnoremap sudow w !sudo tee % >/dev/null
 
 "Clojure Stuff
-nnoremap <leader>E :%Eval<CR>
-nnoremap <leader>R :Require<CR>
+nnoremap <leader>e :%Eval<CR>
+nnoremap <leader>r :Require!<CR>
 
 "=====================================================================
 " PLUGIN CONFIGURATIONS
