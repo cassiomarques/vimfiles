@@ -87,7 +87,7 @@ au! BufNewFile,BufRead *.haml set filetype=haml
 " MAPPINGS
 "=====================================================================
 " Build tags for the current directory
-nmap <F2> :!/usr/local/Cellar/ctags/5.8_1/bin/ctags -R .<CR>
+nmap <F2> :!/usr/local/Cellar/ctags/5.8/bin/ctags -R .<CR>
 
 " Clears CtrlP cache
 nmap <F3> :CtrlPClearCache<CR>
