@@ -29,7 +29,8 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'guns/vim-clojure-static'                    " Clojure stuff
 Plugin 'tpope/vim-dispatch'                         " Run commands in a tmux split pane
 Plugin 'tpope/vim-fireplace'                        " Clojure stuff
-Plugin 'tpope/vim-leiningen'                        " Integrates Leiningen with Vim and adds lots of cool stuff for Clojure
+Plugin 'dgrnbrg/vim-redl'
+Plugin 'tpope/vim-salve'                            " Integrates Leiningen with Vim and adds lots of cool stuff for Clojure
 Plugin 'tpope/vim-fugitive'                         " Git stuff
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'gcmt/wildfire.vim'                          " Select blocks of things
