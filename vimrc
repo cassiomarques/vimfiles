@@ -21,28 +21,27 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-markdown'
 Plugin 'tmhedberg/matchit'
 Plugin 'tpope/vim-rails'
-Plugin 'luochen1990/rainbow'                        " Rainbow parentheses
+Plugin 'luochen1990/rainbow'                                " Rainbow parentheses
 Plugin 'tpope/vim-rake'
 Plugin 'msanders/snipmate.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'tomtom/tcomment_vim'
-Plugin 'guns/vim-clojure-static'                    " Clojure stuff
-Plugin 'tpope/vim-dispatch'                         " Run commands in a tmux split pane
-Plugin 'tpope/vim-fireplace'                        " Clojure stuff
+Plugin 'guns/vim-clojure-static'                            " Clojure stuff
+Plugin 'tpope/vim-dispatch'                                 " Run commands in a tmux split pane
+Plugin 'tpope/vim-fireplace'                                " Clojure stuff
 Plugin 'dgrnbrg/vim-redl'
-Plugin 'tpope/vim-salve'                            " Integrates Leiningen with Vim and adds lots of cool stuff for Clojure
-Plugin 'tpope/vim-fugitive'                         " Git stuff
+Plugin 'tpope/vim-salve'                                    " Integrates Leiningen with Vim and adds lots of cool stuff for Clojure
+Plugin 'tpope/vim-fugitive'                                 " Git stuff
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'gcmt/wildfire.vim'                          " Select blocks of things
-Plugin 'edkolev/tmuxline.vim'                       " Send commands from Vim to a tmux pane
+Plugin 'gcmt/wildfire.vim'                                  " Select blocks of things
+Plugin 'edkolev/tmuxline.vim'                               " Send commands from Vim to a tmux pane
 Plugin 'tpope/vim-surround'
-Plugin 'venantius/vim-eastwood'                     " Syntax check/linting for Clojure
-Plugin 'flazz/vim-colorschemes'                     " Lots of colorschemes
-Plugin 'morhetz/gruvbox'                            " Colorscheme
-Plugin 'guns/vim-sexp'                              " Like Paredit...
-Plugin 'guns/vim-clojure-highlight'                 " Better syntax highlighting for Clojure
-Plugin 'tpope/vim-sexp-mappings-for-regular-people' " Key-bindings for vim-sexp
-Plugin 'epeli/slimux'                               " Send stuff to a tmux pane
+Plugin 'venantius/vim-eastwood'                             " Syntax check/linting for Clojure
+Plugin 'flazz/vim-colorschemes'                             " Lots of colorschemes
+Plugin 'guns/vim-sexp'                                      " Like Paredit...
+Plugin 'guns/vim-clojure-highlight'                         " Better syntax highlighting for Clojure
+Plugin 'cassiomarques/vim-sexp-mappings-for-regular-people' " Key-bindings for vim-sexp (my fork has even easier mappings)
+Plugin 'epeli/slimux'                                       " Send stuff to a tmux pane
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
