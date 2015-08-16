@@ -34,24 +34,20 @@ Plugin 'tpope/vim-salve'                                    " Integrates Leining
 Plugin 'tpope/vim-fugitive'                                 " Git stuff
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'gcmt/wildfire.vim'                                  " Select blocks of things
-Plugin 'edkolev/tmuxline.vim'                               " Send commands from Vim to a tmux pane
 Plugin 'tpope/vim-surround'
-Plugin 'venantius/vim-eastwood'                             " Syntax check/linting for Clojure
+" Plugin 'venantius/vim-eastwood'                             " Syntax check/linting for Clojure
 Plugin 'flazz/vim-colorschemes'                             " Lots of colorschemes
 Plugin 'guns/vim-sexp'                                      " Like Paredit...
 Plugin 'guns/vim-clojure-highlight'                         " Better syntax highlighting for Clojure
 Plugin 'cassiomarques/vim-sexp-mappings-for-regular-people' " Key-bindings for vim-sexp (my fork has even easier mappings)
-Plugin 'epeli/slimux'                                       " Send stuff to a tmux pane
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 syntax on                 " Enable syntax highlighting
-" syntax sync minlines=256
 filetype plugin indent on " Enable filetype-specific indenting and plugins
 
-autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType c set omnifunc=ccomplete#Complete
 autocmd FileType ruby,perl,tex set shiftwidth=2
@@ -66,7 +62,6 @@ augroup filetypedetect
   au BufNewFile,BufRead *.liquid setf liquid
   au! BufRead,BufNewFile *.haml setfiletype haml
   autocmd BufNewFile,BufRead *.yml setf eruby
-  autocmd BufRead,BufNewFile *.prawn set filetype=ruby
   autocmd BufRead,BufNewFile Guardfile set filetype=ruby
   autocmd BufNewFile,BufRead *.clj set filetype=clojure
   autocmd BufNewFile,BufRead *.coffee set filetype=coffee
@@ -78,9 +73,6 @@ augroup myfiletypes
   " autoindent with two spaces, always expand tabs
   autocmd FileType ruby,eruby,yaml set ai sw=2 sts=2 et
 augroup END
-
-
-au! BufNewFile,BufRead *.haml set filetype=haml
 
 "=====================================================================
 " MAPPINGS
@@ -116,9 +108,6 @@ noremap <Right> <nop>
 nmap <Tab> :tabnext<CR>
 nmap <S-Tab> :tabprevious<CR>
 
-" Opens Syntastic Errors window and jumps to it.
-map <M-e> :Errors<CR><C-w>j
-
 "Remove trailing spaces with \rt
 nmap <leader>rt :%s/\s\+$//<CR>
 
@@ -146,7 +135,8 @@ cnoremap sudow w !sudo tee % >/dev/null
 
 "Clojure Stuff
 nnoremap <leader>e :%Eval<CR>
-nnoremap <leader>r :Require!<CR>
+nnoremap <leader>r :Require<CR>
+imap <silent> <C-P> <Plug>clj_repl_uphist.
 
 "=====================================================================
 " PLUGIN CONFIGURATIONS
@@ -206,12 +196,6 @@ let g:syntastic_javascript_checkers = ['jshint']
 " Clojure-Vim
 let g:vimclojure#HighlightBuiltins = 1
 let g:vimclojure#ParenRainbow = 1
-
-" Slimux configuration
-map <Leader>s :SlimuxREPLSendLine<CR>
-vmap <Leader>s :SlimuxREPLSendSelection<CR>
-map <Leader>a :SlimuxShellLast<CR>
-map <Leader>k :SlimuxSendKeysLast<CR>
 
 "=====================================================================
 " Colorscheme, Tmux, etc
